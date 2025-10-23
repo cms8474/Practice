@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.브라우저객체</title>
+    <!--
+        날짜 250828
+        이름 최민수
+        내용 3장 배열과 함수
+    -->
+</head>
+<body>
+    <h3>4.브라우저객체</h3>
+
+
+    <h4>window 객체</h4>
+    <script>
+        // window - 브라우저 객체, 최상위 객체(보통 생략)
+        console.log(window);
+
+        // 브라우저 크기
+        document.write('widdth : ' + window.innerWidth + '<br>');
+        document.write('height : ' + window.innerHeight + '<br>');
+
+        // 브라우저 로컬 저장소 - 해당 페이지에서 생성한 데이터 영구 저장
+        window.localStorage.setItem('name', '김유신');
+        
+        // 브라우저 세션 저장소 - 해당 페이지 실행되는 동안 데이터 보관
+        window.sessionStorage.setItem('name', '김춘추');
+
+    </script>
+
+    <h4>screen 객체</h4>
+    <script>
+        document.write('화면 너비 : ' + screen.width + '<br>');
+        document.write('화면 높이 : ' + screen.height + '<br>');
+        document.write('화면 너비(작업표시줄 제외) : ' + screen.availWidth + '<br>');
+        document.write('화면 너비(작업표시줄 제외) : ' + screen.availHeight + '<br>');
+
+    </script>
+
+
+    <h4>navigator 객체</h4>
+    <script>
+        document.write('브라우저 코드명 : ' + navigator.appCodeName + '<br>');
+        document.write('브라우저 이름 : ' + navigator.appName + '<br>');
+        document.write('브라우저 버전 : ' + navigator.appVersion + '<br>');
+        document.write('브라우저 플랫폼 : ' + navigator.platform + '<br>');
+        document.write('브라우저 정보 : ' + navigator.userAgent + '<br>');
+    </script>
+
+    <h4>location 객체</h4>
+    <button onclick="f1()">새로고침</button>
+    <button onclick="f2()">네이버 이동</button>
+    <button onclick="f3()">구글 이동</button>
+
+    <script>
+        function f1(){
+            location.reload();
+        }
+        function f2(){
+            location.href = 'https://naver.com';
+        }
+        function f3(){
+            location.replace('https://google.com'); //뒤로가기 불가
+        }
+    </script>
+
+    <h4>history 객체</h4>
+    <button onclick="bank()">뒤로</button>
+    <button onclick="forward()">앞으로</button>
+
+    <script>
+        document.write('history length : ' + history.length + '<br>');
+
+        const back = function(){
+            history.back();
+        }
+        const forward = function(){
+            history.forward();
+        }
+    </script>
+
+</body>
+</html>

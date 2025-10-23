@@ -1,0 +1,4 @@
+INSERT INTO account VALUES ('101-11-1002', 'S1', '자유저축예금', '730423-1000001', 100000, TO_DATE('05/07/22 12:10:03', 'YY/MM/DD HH24:MI:SS'));
+
+
+commit;

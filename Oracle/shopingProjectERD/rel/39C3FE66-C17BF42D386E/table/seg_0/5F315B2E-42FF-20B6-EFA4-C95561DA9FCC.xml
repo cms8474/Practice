@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F315B2E-42FF-20B6-EFA4-C95561DA9FCC" name="User">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:14:33 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="userId" id="5D31232C-C90D-83AF-6C8A-EE101CD8716A">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<constraintName>CHK_USERID_FORMAT</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 21c" definition="LENGTH(userld) &gt;= 4 AND REGEXP_LIKE(userld, &apos;^[a-zA-Z0-9]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="5E3F749F-8511-1172-98C4-7FCF827353D9">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birth" id="5C8867A5-544B-64BC-38BC-36DA49875FC7">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gender" id="A3DC281C-F74A-3C57-825A-BBFE275689DD">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<constraintName>mf</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="F" description=""/>
+<valueDef value="M" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hp" id="AE7FAD10-0B74-8C5C-10F0-AD773AF92436">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="91D54A99-004A-93D0-E1E4-752929D35CCD">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="point" id="84B01A38-D548-01D1-C695-93B4C41EAB71">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="level" id="966D46AE-1797-6748-5073-07DCC9BB5FF8">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<comment><![CDATA[등급 = 0:탈퇴, 1:일반, 2:로얄, 3:골드, 4:플래티넘]]></comment>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="5FA1AF07-0FBD-381A-3964-D62885861BD3">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="regDate" id="4C7D29E2-E4F2-A073-F5A6-B5BAEBF161E6">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F14F21F8-0FDB-02FE-6899-AD3019FC1ED8" name="User_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:18:29 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D31232C-C90D-83AF-6C8A-EE101CD8716A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

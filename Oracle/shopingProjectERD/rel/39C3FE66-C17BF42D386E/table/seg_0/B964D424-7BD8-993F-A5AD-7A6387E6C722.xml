@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B964D424-7BD8-993F-A5AD-7A6387E6C722" name="Cart">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:38:09 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cartNo" id="AF2E7E56-41C2-6692-6C3F-A3F1AA5938D8">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:41:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[일련번호 SEQUENCE]]></commentInRDBMS>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="userId" id="BA822162-0D7E-B9C9-5320-9CEFD6BF01C7">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:41:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[고객아이디 (FK)]]></commentInRDBMS>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81DD1952-7A6B-C3FB-B864-3EB1B28CDA4E" referredColumn="5D31232C-C90D-83AF-6C8A-EE101CD8716A"/>
+</associations>
+</Column>
+<Column name="prodNo" id="2E154E81-61E5-58ED-7A69-86E70CCD7010">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:49:14 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D9376C87-CB89-58D4-1715-5530926342C2" referredColumn="CEDA3B7A-A0CA-0447-D808-44D73356487C"/>
+</associations>
+</Column>
+<Column name="cartProdCount" id="2B6780AE-5B9F-890F-7941-313260E10CC9">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:41:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[상품수량]]></commentInRDBMS>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cartProdDate" id="490B9D31-B550-1721-B8E5-E3CAC6735398">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:41:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[상품등록일]]></commentInRDBMS>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="928C16C3-A079-CA02-1325-5F206B783F6A" name="Cart_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:41:15 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF2E7E56-41C2-6692-6C3F-A3F1AA5938D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB48AD8F-2D7C-215E-97CF-DFE26C489BE9" name="Cart_User_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:47:35 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BA822162-0D7E-B9C9-5320-9CEFD6BF01C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A0885CC-1547-8DF7-2927-4BA44F5A89B0" name="Cart_Product_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:49:14 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E154E81-61E5-58ED-7A69-86E70CCD7010"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

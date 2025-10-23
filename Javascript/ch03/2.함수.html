@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.함수</title>
+    <script src="./carc.js"></script><!--import와 유사.-->
+        <!--
+        날짜 250828
+        이름 최민수
+        내용 3장 배열과 함수
+    -->
+</head>
+<body>
+    <script>
+        //선언함수
+        function f1(x){
+            let y=2*x+3;
+            return y;
+        }
+
+        let y1 = f1(1);
+        let y2 = f1(2);
+        let y3 = f1(3);
+
+        document.write('y1 : ' + y1 + '<br>');
+        document.write('y2 : ' + y2 + '<br>');
+        document.write('y3 : ' + y3 + '<br>');
+
+        //익명함수
+        // const f2 = function (){}; 변수에 이름없는 함수를 할당하는형식
+        const f2 = function (x,y){
+            return x + y;
+        };
+
+        let r1 = f2(1,2);
+        let r2 = f2(2,3);
+        let r3 = f2(2,-1);
+
+        document.write('r1 : ' + r1 + '<br>');
+        document.write('r2 : ' + r2 + '<br>');
+        document.write('r3 : ' + r3 + '<br>');
+
+
+        //화살표함수
+        const f3 = (x, y) => {
+            return x + y;
+        };
+        const f4 = (x, y) => x -y;
+
+        let rs1 = f3(1,2);
+        let rs2 = f3(2,4);
+        let rs4 = f4(1,2);
+        let rs5 = f4(3,2);
+
+        document.write('rs1 : ' + rs1 + '<br>');
+        document.write('rs2 : ' + rs2 + '<br>');
+        document.write('rs4 : ' + rs4 + '<br>');
+        document.write('rs5 : ' + rs5 + '<br>');
+
+        // 외부 함수 호출
+        let res1 = plus(1,2);
+        let res2 = minus(1,2);
+        let res3 = multi(1,2);
+        let res4 = div(1,2);
+
+        document.writeln('res1 : ' + res1);
+        document.writeln('res2 : ' + res2);
+        document.writeln('res3 : ' + res3);
+        document.writeln('res4 : ' + res4);
+
+
+
+
+    </script>
+    
+</body>
+</html>

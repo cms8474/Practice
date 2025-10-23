@@ -1,0 +1,41 @@
+package sub4;
+
+public class Account {
+	
+	// 속성(멤버변수)
+	protected String bank;
+	protected String id;
+	protected String name;
+	protected int balance;
+	
+	public Account(String bank, String id, String name, int balance) {
+		this.bank		= bank;
+		this.id			= id;
+		this.name		= name;
+		this.balance	= balance;
+		
+	}
+	
+	// 기능
+	public void deposit(int money) {
+		this.balance += money;
+	}
+	public void withdraw(int money) {
+		this.balance -= money;
+	}
+	public void show() {
+		System.out.println("----------------");
+		System.out.println("은행명 	: " + this.bank);
+		System.out.println("계좌번호 	: " + id);
+		System.out.println("입금주	: " + name);
+		System.out.println("현재잔액 	: " + balance);
+		System.out.println("----------------");
+	}
+	
+	// getter, setter
+	//public String get() {}
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

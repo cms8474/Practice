@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="96A0C382-131F-2FD0-1EA6-7F6DAD66E943" name="OrdersItem">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:35:50 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="itemNo" id="62AF9749-D9D5-DADF-24E2-A275E0459029">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:38:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[일련번호 SEQUENCE]]></commentInRDBMS>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="orderNo" id="144E1A7C-DD56-0821-5A96-6D08813CB06E">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:38:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[주문번호 (FK)]]></commentInRDBMS>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75F49C7C-5B7F-451D-AF2C-9D8416107143" referredColumn="F8540C37-E5BE-79A0-5AAD-9C97EEA0B535"/>
+</associations>
+</Column>
+<Column name="prodNo" id="A321EF94-FF4F-FC8E-FB0D-1CB9CE2F812D">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:51:42 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BDC7EBBB-CCCE-E44C-7DF9-220C4DE92E40" referredColumn="CEDA3B7A-A0CA-0447-D808-44D73356487C"/>
+</associations>
+</Column>
+<Column name="itemPrice" id="56B51D75-36AF-3B3D-A59A-D09D7917B4B7">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:38:03 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="itemDiscount" id="8DEA4089-C72B-D0E8-5876-2B168EE48B07">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:38:03 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="itemCount" id="56D57E9B-7DB5-E266-6BDA-11DDF53E8226">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:38:03 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB29A338-BAAB-607B-3464-8DE0D7D7B0A0" name="OrdersItem_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:38:03 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62AF9749-D9D5-DADF-24E2-A275E0459029"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C0ED4E05-6B33-1EBB-7921-FCF6333B359C" name="OrdersItem_Orders_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:51:12 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="144E1A7C-DD56-0821-5A96-6D08813CB06E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C34A1AC7-E322-A156-BF4D-399A83C5BAC0" name="OrdersItem_Product_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-11 06:51:42 UTC</createdTime>
+<ownerDesignName>shopingProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A321EF94-FF4F-FC8E-FB0D-1CB9CE2F812D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,47 @@
+package sub2;
+
+public class User1VO{ //VO:DB의 row를 java객체로 처리할 때 쓰는 obj
+	private String user_id;
+	private String name;
+	private String hp;
+	private int age;
+	
+	public String getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getHp() {
+		return hp;
+	}
+
+	public void setHp(String hp) {
+		this.hp = hp;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "User1 [user_id=" + user_id + ", name=" + name + ", hp=" + hp + ", age=" + age + "]";
+	}
+	
+}
+

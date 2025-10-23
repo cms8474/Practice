@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FA6810AE-24BE-8B31-C7B7-2F33531E102F" name="Chart">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:20:15 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="chart_id" id="27D0BB8C-D90D-1E7C-59E4-A07C15F52271">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:20:53 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="treat_no" id="A34507AD-5E25-D99A-99B8-40A9794892C9">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:30:05 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="27DB12E3-8281-46B2-2D02-A5B7D147BBDE" referredColumn="99B4E935-0160-6FB7-7207-A4DA81A984F0"/>
+</associations>
+</Column>
+<Column name="doc_id" id="41FD4D1D-BD81-FA49-770A-265F9152A506">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:32:23 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A2F128F9-8748-1EB4-7A80-951E568A21DE" referredColumn="6D783245-4E3D-4994-42B1-8323A4732A82"/>
+</associations>
+</Column>
+<Column name="pat_id" id="8490588E-E9FD-34B6-F692-8513C3FA6624">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:33:21 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D39380AF-82F8-197D-846A-FCF457ABB370" referredColumn="D9C6C764-7FF4-CFD6-B594-BBBB35980D8D"/>
+</associations>
+</Column>
+<Column name="chart_desc" id="4CA7E494-78D5-CDE8-6360-5B40FF3656FB">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:20:53 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="557DDB59-7626-1566-26B9-EA671100DF52" name="Chart_PK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:20:53 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27D0BB8C-D90D-1E7C-59E4-A07C15F52271"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E778D0D-10FC-AC0C-AFD4-6F1673011267" name="Chart_Treatment_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:30:05 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A34507AD-5E25-D99A-99B8-40A9794892C9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1D30A46C-379D-9C12-32DE-1940EBCE3FF1" name="Chart_Treatment_FKv2">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:32:13 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41FD4D1D-BD81-FA49-770A-265F9152A506"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FECBF5EF-EDB1-5333-CDE6-983FAC40DF7B" name="Chart_Patient_FK">
+<createdBy>GGG</createdBy>
+<createdTime>2025-08-12 02:33:21 UTC</createdTime>
+<ownerDesignName>Hospital</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8490588E-E9FD-34B6-F692-8513C3FA6624"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
