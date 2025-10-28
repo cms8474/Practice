@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업 예금 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .product-badge {
+            background: var(--main-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        
+        .product-rate {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--main-color);
+            margin: 20px 0;
+        }
+        
+        .product-desc {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .product-info {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">기업 예금 상품</h1>
+        </div>
+        
+        <div class="content">
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="product-badge">추천</span>
+                    <h3 class="product-title">기업 정기예금</h3>
+                    <div class="product-rate">연 3.8%</div>
+                    <p class="product-desc">
+                        기업 여유자금을 안정적으로 운용할 수 있는 정기예금 상품입니다.
+                        월 이자를 제공하여 현금 흐름을 개선할 수 있습니다.
+                    </p>
+                    <a href="#" class="btn btn-primary">상세보기</a>
+                    <div class="product-info">
+                        • 최소 가입금액: 100만원<br>
+                        • 가입기간: 3개월 ~ 3년<br>
+                        • 월 이자 지급 가능
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <span class="product-badge">인기</span>
+                    <h3 class="product-title">가계약 예금</h3>
+                    <div class="product-rate">연 3.5%</div>
+                    <p class="product-desc">
+                        일정 기간 저축 후 자동으로 정기예금으로 전환되는 상품입니다.
+                        목돈 마련부터 자금 운용까지 원스톱 서비스를 제공합니다.
+                    </p>
+                    <a href="#" class="btn btn-primary">상세보기</a>
+                    <div class="product-info">
+                        • 최소 가입금액: 50만원<br>
+                        • 가입기간: 최대 24개월<br>
+                        • 자동 전환 서비스
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <span class="product-badge">신상</span>
+                    <h3 class="product-title">운영자금 예금</h3>
+                    <div class="product-rate">연 4.0%</div>
+                    <p class="product-desc">
+                        기업 운영자금을 중기적으로 운용하는 특화 예금 상품입니다.
+                        상환 시 이자는 자동으로 재투자됩니다.
+                    </p>
+                    <a href="#" class="btn btn-primary">상세보기</a>
+                    <div class="product-info">
+                        • 최소 가입금액: 500만원<br>
+                        • 가입기간: 6개월 ~ 3년<br>
+                        • 자동 재투자
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <span class="product-badge">프리미엄</span>
+                    <h3 class="product-title">VIP 기업 예금</h3>
+                    <div class="product-rate">연 4.2%</div>
+                    <p class="product-desc">
+                        대기업 및 주요 거래처를 위한 프리미엄 예금 상품입니다.
+                        우대 금리 및 특별 혜택을 제공합니다.
+                    </p>
+                    <a href="#" class="btn btn-primary">상세보기</a>
+                    <div class="product-info">
+                        • 최소 가입금액: 1억원<br>
+                        • 가입기간: 6개월 ~ 5년<br>
+                        • 우대 금리 제공
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이체 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .transfer-form {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+        
+        .btn-container .btn {
+            flex: 1;
+            padding: 14px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">계좌이체</h1>
+        </div>
+        
+        <div class="content">
+            <form class="transfer-form">
+                <div class="form-group">
+                    <label class="form-label">출금계좌 선택</label>
+                    <select class="form-input">
+                        <option>100-1234-567890 (입출금 통장) - 잔액 1,234,567원</option>
+                        <option>200-9876-543210 (적금 통장) - 잔액 3,456,789원</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">입금은행</label>
+                    <input type="text" class="form-input" value="GNK 그린은행" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">입금계좌번호</label>
+                    <input type="text" class="form-input" placeholder="'-' 없이 입력하세요" maxlength="13">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">예금주</label>
+                    <input type="text" class="form-input" placeholder="예금주명을 입력하세요">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">이체금액</label>
+                    <input type="number" class="form-input" placeholder="금액을 입력하세요">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">이체메모 (선택)</label>
+                    <input type="text" class="form-input" placeholder="메모를 입력하세요">
+                </div>
+                
+                <div class="btn-container">
+                    <button type="reset" class="btn btn-secondary">취소</button>
+                    <button type="submit" class="btn btn-primary">이체하기</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

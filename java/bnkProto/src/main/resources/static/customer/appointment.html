@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방문상담 예약 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .appointment-form {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        
+        .form-label .required {
+            color: var(--main-color);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--main-color);
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+        
+        .btn-container .btn {
+            flex: 1;
+            padding: 14px;
+            font-size: 16px;
+        }
+        
+        .info-box {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .info-box h3 {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+        
+        .info-box p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">방문상담 예약</h1>
+        </div>
+        
+        <div class="content">
+            <div class="info-box">
+                <h3>📋 방문상담 안내</h3>
+                <p>
+                    전문 상담사와 함께 맞춤형 금융 서비스를 제공해드립니다. 
+                    예약을 통해 대기 시간 없이 편리하게 상담받으실 수 있습니다.
+                </p>
+            </div>
+            
+            <form class="appointment-form">
+                <div class="form-group">
+                    <label class="form-label">예약 유형 <span class="required">*</span></label>
+                    <select class="form-input">
+                        <option>개인 대출 상담</option>
+                        <option>기업 대출 상담</option>
+                        <option>예금/적금 상담</option>
+                        <option>투자 상담</option>
+                        <option>기타</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">이름 <span class="required">*</span></label>
+                    <input type="text" class="form-input" placeholder="이름을 입력하세요" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">휴대전화 <span class="required">*</span></label>
+                    <input type="tel" class="form-input" placeholder="010-1234-5678" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">이메일</label>
+                    <input type="email" class="form-input" placeholder="example@mail.com">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">희망 날짜 <span class="required">*</span></label>
+                    <input type="date" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">희망 시간 <span class="required">*</span></label>
+                    <select class="form-input">
+                        <option>09:00 ~ 10:00</option>
+                        <option>10:00 ~ 11:00</option>
+                        <option>11:00 ~ 12:00</option>
+                        <option>13:00 ~ 14:00</option>
+                        <option>14:00 ~ 15:00</option>
+                        <option>15:00 ~ 16:00</option>
+                        <option>16:00 ~ 17:00</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">희망 지점 <span class="required">*</span></label>
+                    <select class="form-input">
+                        <option>서울 본점</option>
+                        <option>강남지점</option>
+                        <option>강북지점</option>
+                        <option>부산지점</option>
+                        <option>대구지점</option>
+                        <option>인천지점</option>
+                        <option>광주지점</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">상담 내용 (선택)</label>
+                    <textarea class="form-input" rows="4" placeholder="상담받고 싶은 내용을 입력하세요"></textarea>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="reset" class="btn btn-secondary">취소</button>
+                    <button type="submit" class="btn btn-primary">예약 신청</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

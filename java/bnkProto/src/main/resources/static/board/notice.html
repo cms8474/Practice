@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .board-tab {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--text-light);
+            transition: all 0.3s;
+        }
+        
+        .tab-btn.active {
+            background: var(--main-color);
+            color: white;
+            border-color: var(--main-color);
+        }
+        
+        .board-table {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .board-table thead {
+            background: var(--bg-color);
+        }
+        
+        .board-table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+        
+        .board-table td {
+            padding: 16px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        .board-table tbody tr {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .board-table tbody tr:hover {
+            background-color: var(--bg-color);
+        }
+        
+        .notice-badge {
+            background: var(--main-color);
+            color: white;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        
+        .board-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+        
+        .pagination-btn {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+        
+        .pagination-btn:hover {
+            background: var(--main-color);
+            color: white;
+            border-color: var(--main-color);
+        }
+        
+        .pagination-btn.active {
+            background: var(--main-color);
+            color: white;
+            border-color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">공지사항</h1>
+        </div>
+        
+        <div class="content">
+            <div class="board-tab">
+                <button class="tab-btn active">전체</button>
+                <button class="tab-btn">일반</button>
+                <button class="tab-btn">중요</button>
+                <button class="tab-btn">점검</button>
+            </div>
+            
+            <table class="board-table">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">번호</th>
+                        <th>제목</th>
+                        <th style="width: 120px;">작성일</th>
+                        <th style="width: 100px;">조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="location.href='#'">
+                        <td><span class="notice-badge">중요</span>1</td>
+                        <td>온라인 뱅킹 서비스 이용약관 개정 안내</td>
+                        <td>2024.01.15</td>
+                        <td>245</td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>2</td>
+                        <td>2024년 공휴일 서비스 안내</td>
+                        <td>2024.01.10</td>
+                        <td>189</td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td><span class="notice-badge">중요</span>3</td>
+                        <td>고객정보 시스템 점검 안내</td>
+                        <td>2024.01.05</td>
+                        <td>312</td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>4</td>
+                        <td>마이데이터 서비스 오픈 안내</td>
+                        <td>2024.01.01</td>
+                        <td>567</td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>5</td>
+                        <td>모바일 앱 개편 안내</td>
+                        <td>2023.12.28</td>
+                        <td>234</td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>6</td>
+                        <td>2024년 신용정보 이용 안내</td>
+                        <td>2023.12.25</td>
+                        <td>156</td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>7</td>
+                        <td>보안 강화를 위한 로그인 방식 변경 안내</td>
+                        <td>2023.12.20</td>
+                        <td>445</td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>8</td>
+                        <td>연말정산 고객센터 운영 안내</td>
+                        <td>2023.12.15</td>
+                        <td>289</td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>9</td>
+                        <td>이체 한도 조정 안내</td>
+                        <td>2023.12.10</td>
+                        <td>378</td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>10</td>
+                        <td>계좌번호 변경 안내</td>
+                        <td>2023.12.05</td>
+                        <td>523</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="board-pagination">
+                <button class="pagination-btn">〈</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn">5</button>
+                <button class="pagination-btn">〉</button>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

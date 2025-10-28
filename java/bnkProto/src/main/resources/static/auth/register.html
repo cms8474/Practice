@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .register-container {
+            min-height: 70vh;
+            padding: 60px 20px;
+            background: var(--bg-color);
+        }
+        
+        .register-box {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            padding: 50px 40px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .register-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .register-logo {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .register-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        
+        .register-subtitle {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+        
+        .form-label .required {
+            color: var(--main-color);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--main-color);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px;
+        }
+        
+        .btn-sm {
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+        
+        .btn-container .btn {
+            flex: 1;
+            padding: 14px;
+            font-size: 16px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+        
+        .checkbox-group label {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.5;
+            cursor: pointer;
+        }
+        
+        .checkbox-group label .link {
+            color: var(--main-color);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="register-container">
+        <div class="register-box">
+            <div class="register-header">
+                <div class="register-logo">🌿</div>
+                <h1 class="register-title">회원가입</h1>
+                <p class="register-subtitle">GNK 그린은행과 함께 금융 여정을 시작하세요</p>
+            </div>
+            
+            <form action="/register" method="post">
+                <div class="form-group">
+                    <label class="form-label">아이디 <span class="required">*</span></label>
+                    <div class="form-row">
+                        <input type="text" name="username" class="form-input" placeholder="4~12자 영문, 숫자 조합" required>
+                        <button type="button" class="btn btn-secondary btn-sm">중복확인</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">비밀번호 <span class="required">*</span></label>
+                    <input type="password" name="password" class="form-input" placeholder="8자 이상 영문, 숫자, 특수문자 조합" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">비밀번호 확인 <span class="required">*</span></label>
+                    <input type="password" name="passwordConfirm" class="form-input" placeholder="비밀번호를 다시 입력하세요" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">이름 <span class="required">*</span></label>
+                    <input type="text" name="name" class="form-input" placeholder="실명을 입력하세요" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">생년월일 <span class="required">*</span></label>
+                    <input type="date" name="birthDate" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">휴대전화 <span class="required">*</span></label>
+                    <input type="tel" name="phone" class="form-input" placeholder="010-1234-5678" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">이메일 <span class="required">*</span></label>
+                    <input type="email" name="email" class="form-input" placeholder="example@mail.com" required>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree1" name="agree1" required>
+                    <label for="agree1">
+                        <span class="link">이용약관</span> 및 <span class="link">개인정보처리방침</span>에 동의합니다. <span class="required">*</span>
+                    </label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree2" name="agree2">
+                    <label for="agree2">
+                        (선택) 마케팅 정보 수신에 동의합니다.
+                    </label>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="reset" class="btn btn-secondary">취소</button>
+                    <button type="submit" class="btn btn-primary">회원가입</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

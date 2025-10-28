@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객센터 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .contact-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        
+        .contact-info {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--main-color);
+            margin-bottom: 8px;
+        }
+        
+        .contact-desc {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .service-hours {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        
+        .service-hours h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+        }
+        
+        .hours-table {
+            width: 100%;
+        }
+        
+        .hours-table td {
+            padding: 12px;
+            border-bottom: 1px solid #F0F0F0;
+        }
+        
+        .hours-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .hours-time {
+            color: var(--text-light);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">고객센터</h1>
+        </div>
+        
+        <div class="content">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-title">전화 상담</div>
+                    <div class="contact-info">1588-9000</div>
+                    <div class="contact-desc">24시간 서비스</div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-title">이메일 문의</div>
+                    <div class="contact-info">info@gnkbank.co.kr</div>
+                    <div class="contact-desc">평일 09:00 ~ 18:00</div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <div class="contact-title">온라인 채팅</div>
+                    <div class="contact-info">1:1 채팅상담</div>
+                    <div class="contact-desc">평일 09:00 ~ 18:00</div>
+                </div>
+            </div>
+            
+            <div class="service-hours">
+                <h2>📋 운영시간</h2>
+                <table class="hours-table">
+                    <tr>
+                        <td class="hours-label">전화 상담</td>
+                        <td class="hours-time">24시간 운영</td>
+                    </tr>
+                    <tr>
+                        <td class="hours-label">온라인 뱅킹</td>
+                        <td class="hours-time">24시간 이용 가능</td>
+                    </tr>
+                    <tr>
+                        <td class="hours-label">창구 업무</td>
+                        <td class="hours-time">평일 09:00 ~ 16:00</td>
+                    </tr>
+                    <tr>
+                        <td class="hours-label">ATM 이용</td>
+                        <td class="hours-time">24시간 이용 가능</td>
+                    </tr>
+                    <tr>
+                        <td class="hours-label">점검 시간</td>
+                        <td class="hours-time">매일 04:00 ~ 05:00 (30분)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+
