@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대출 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .loan-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .loan-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+        
+        .loan-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .loan-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .loan-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+        
+        .loan-rate {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--main-color);
+            margin: 20px 0;
+        }
+        
+        .loan-desc {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .loan-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        
+        .loan-features li {
+            padding: 8px 0;
+            color: var(--text-light);
+        }
+        
+        .loan-features li:before {
+            content: "✓ ";
+            color: var(--main-color);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .loan-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">대출 상품</h1>
+        </div>
+        
+        <div class="content">
+            <div class="loan-grid">
+                <div class="loan-card">
+                    <div class="loan-icon">🏠</div>
+                    <h3 class="loan-title">주택담보대출</h3>
+                    <div class="loan-rate">연 3.5%~4.5%</div>
+                    <p class="loan-desc">
+                        주택을 담보로 제공하는 안정적인 대출 상품입니다.
+                        최대 10억원까지 대출 가능합니다.
+                    </p>
+                    <ul class="loan-features">
+                        <li>대출한도: 최대 10억원</li>
+                        <li>상환기간: 최대 30년</li>
+                        <li>담보: 부동산</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">상담 신청</a>
+                </div>
+                
+                <div class="loan-card">
+                    <div class="loan-icon">💼</div>
+                    <h3 class="loan-title">신용대출</h3>
+                    <div class="loan-rate">연 4.0%~6.0%</div>
+                    <p class="loan-desc">
+                        신용평가를 통한 개인 신용대출로 빠른 자금 조달이 가능합니다.
+                    </p>
+                    <ul class="loan-features">
+                        <li>대출한도: 최대 5천만원</li>
+                        <li>상환기간: 최대 5년</li>
+                        <li>담보: 신용</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">상담 신청</a>
+                </div>
+                
+                <div class="loan-card">
+                    <div class="loan-icon">🌟</div>
+                    <h3 class="loan-title">직장인 신용대출</h3>
+                    <div class="loan-rate">연 3.8%~5.5%</div>
+                    <p class="loan-desc">
+                        재직증명서로 신청 가능한 직장인 전용 신용대출입니다.
+                    </p>
+                    <ul class="loan-features">
+                        <li>대출한도: 최대 7천만원</li>
+                        <li>상환기간: 최대 7년</li>
+                        <li>담보: 신용</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">상담 신청</a>
+                </div>
+                
+                <div class="loan-card">
+                    <div class="loan-icon">🌱</div>
+                    <h3 class="loan-title">청년대출</h3>
+                    <div class="loan-rate">연 2.5%~4.0%</div>
+                    <p class="loan-desc">
+                        만 39세 이하 청년을 위한 우대 금리 대출 상품입니다.
+                    </p>
+                    <ul class="loan-features">
+                        <li>대출한도: 최대 3천만원</li>
+                        <li>상환기간: 최대 5년</li>
+                        <li>담보: 신용</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">상담 신청</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

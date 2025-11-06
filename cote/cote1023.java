@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import java.util.*;
+=======
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+>>>>>>> 7e55f61d1a1688bbcd77b1cd8b913ae22133ff75
 
 public class cote1023{
     public static void main(String[] args) {
@@ -30,9 +36,12 @@ public class cote1023{
 class Solution{
     public int solution(int num){
         //System.out.println("test");
-        int[] arr = {0, 1, 2, 3};
+        List<Character> chList = List.of('일', '이', '삼');
+        
 
-        return arr[num];
+        
+
+        return chList.size();
     }
 }
 

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QnA - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .board-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .write-btn {
+            padding: 10px 24px;
+            background: var(--main-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .board-table {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .board-table thead {
+            background: var(--bg-color);
+        }
+        
+        .board-table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+        
+        .board-table td {
+            padding: 16px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        .board-table tbody tr {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .board-table tbody tr:hover {
+            background-color: var(--bg-color);
+        }
+        
+        .status-badge {
+            background: #4CAF50;
+            color: white;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        
+        .status-pending {
+            background: #FFA726;
+        }
+        
+        .board-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+        
+        .pagination-btn {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+        
+        .pagination-btn:hover {
+            background: var(--main-color);
+            color: white;
+            border-color: var(--main-color);
+        }
+        
+        .pagination-btn.active {
+            background: var(--main-color);
+            color: white;
+            border-color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">QnA</h1>
+        </div>
+        
+        <div class="content">
+            <div class="board-actions">
+                <h2 style="font-size: 20px; color: var(--text-dark);">고객 문의 게시판</h2>
+                <a href="#" class="write-btn">문의하기</a>
+            </div>
+            
+            <table class="board-table">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">번호</th>
+                        <th>제목</th>
+                        <th style="width: 100px;">작성자</th>
+                        <th style="width: 120px;">작성일</th>
+                        <th style="width: 100px;">상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="location.href='#'">
+                        <td>10</td>
+                        <td>계좌 비밀번호를 변경하고 싶어요</td>
+                        <td>홍길동</td>
+                        <td>2024.01.12</td>
+                        <td><span class="status-badge">답변완료</span></td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>9</td>
+                        <td>이체 한도가 어떻게 되나요?</td>
+                        <td>김철수</td>
+                        <td>2024.01.11</td>
+                        <td><span class="status-badge">답변완료</span></td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>8</td>
+                        <td>해외 송금 서비스 이용 가능한가요?</td>
+                        <td>이영희</td>
+                        <td>2024.01.10</td>
+                        <td><span class="status-badge status-pending">답변대기</span></td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>7</td>
+                        <td>모바일 앱 로그인이 안됩니다</td>
+                        <td>박민수</td>
+                        <td>2024.01.09</td>
+                        <td><span class="status-badge">답변완료</span></td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>6</td>
+                        <td>대출 상담 받고 싶습니다</td>
+                        <td>최지영</td>
+                        <td>2024.01.08</td>
+                        <td><span class="status-badge status-pending">답변대기</span></td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>5</td>
+                        <td>카드 발급은 어떻게 하나요?</td>
+                        <td>정수진</td>
+                        <td>2024.01.07</td>
+                        <td><span class="status-badge">답변완료</span></td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>4</td>
+                        <td>적금 만기 후 연장 가능한가요?</td>
+                        <td>강동석</td>
+                        <td>2024.01.06</td>
+                        <td><span class="status-badge">답변완료</span></td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>3</td>
+                        <td>계좌 이체 수수료는 얼마인가요?</td>
+                        <td>윤서연</td>
+                        <td>2024.01.05</td>
+                        <td><span class="status-badge">답변완료</span></td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>2</td>
+                        <td>인터넷뱅킹에 접속이 안되네요</td>
+                        <td>임주현</td>
+                        <td>2024.01.04</td>
+                        <td><span class="status-badge">답변완료</span></td>
+                    </tr>
+                    <tr onclick="location.href='#'">
+                        <td>1</td>
+                        <td>해외 카드 사용이 안됩니다</td>
+                        <td>한지우</td>
+                        <td>2024.01.03</td>
+                        <td><span class="status-badge">답변완료</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="board-pagination">
+                <button class="pagination-btn">〈</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn">5</button>
+                <button class="pagination-btn">〉</button>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

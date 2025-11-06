@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업 계좌조회 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .account-summary {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        
+        .summary-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+        }
+        
+        .account-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid #F5F5F5;
+        }
+        
+        .account-item:last-child {
+            border-bottom: none;
+        }
+        
+        .account-info {
+            flex: 1;
+        }
+        
+        .account-number {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--text-dark);
+        }
+        
+        .account-type {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .account-balance {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">기업 계좌조회</h1>
+        </div>
+        
+        <div class="content">
+            <div class="account-summary">
+                <h2 class="summary-title">보유 계좌</h2>
+                <div class="account-item">
+                    <div class="account-info">
+                        <div class="account-number">120-1234-567890 (주)GNK</div>
+                        <div class="account-type">사업자 통장</div>
+                    </div>
+                    <div class="account-balance">150,000,000원</div>
+                </div>
+                <div class="account-item">
+                    <div class="account-info">
+                        <div class="account-number">120-9876-543210 (주)GNK</div>
+                        <div class="account-type">급여 통장</div>
+                    </div>
+                    <div class="account-balance">50,000,000원</div>
+                </div>
+                <div class="account-item">
+                    <div class="account-info">
+                        <div class="account-number">120-5555-123456 (주)GNK</div>
+                        <div class="account-type">예금 통장</div>
+                    </div>
+                    <div class="account-balance">200,000,000원</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

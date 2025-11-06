@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인뱅킹 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--main-color);
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(255, 107, 157, 0.2);
+        }
+        
+        .service-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .service-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        
+        .service-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main style="min-height: 70vh;">
+        <h1 class="page-title">개인뱅킹</h1>
+        
+        <div class="services-grid">
+            <a href="/personal/account.html" class="service-card">
+                <div class="service-icon">💰</div>
+                <div class="service-title">계좌조회</div>
+                <div class="service-desc">
+                    보유 계좌를 한눈에 확인하고<br>
+                    거래내역을 조회하세요
+                </div>
+            </a>
+            
+            <a href="/personal/transfer.html" class="service-card">
+                <div class="service-icon">💸</div>
+                <div class="service-title">이체</div>
+                <div class="service-desc">
+                    계좌이체, 자동이체,<br>
+                    스케줄 이체 서비스
+                </div>
+            </a>
+            
+            <a href="/personal/deposit.html" class="service-card">
+                <div class="service-icon">🏦</div>
+                <div class="service-title">예금/적금</div>
+                <div class="service-desc">
+                    다양한 예금 상품으로<br>
+                    안정적으로 자산을 늘리세요
+                </div>
+            </a>
+            
+            <a href="/personal/loan.html" class="service-card">
+                <div class="service-icon">📝</div>
+                <div class="service-title">대출</div>
+                <div class="service-desc">
+                    주택담보, 신용대출,<br>
+                    다양한 대출 상품 안내
+                </div>
+            </a>
+            
+            <a href="/customer/appointment.html" class="service-card">
+                <div class="service-icon">📅</div>
+                <div class="service-title">방문상담 예약</div>
+                <div class="service-desc">
+                    전문 상담사를 통해<br>
+                    맞춤 서비스를 받으세요
+                </div>
+            </a>
+            
+            <a href="/customer/center.html" class="service-card">
+                <div class="service-icon">💬</div>
+                <div class="service-title">고객센터</div>
+                <div class="service-desc">
+                    1588-9000<br>
+                    24시간 고객 지원
+                </div>
+            </a>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

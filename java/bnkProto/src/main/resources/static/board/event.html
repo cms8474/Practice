@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        }
+        
+        .event-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--main-color-light), var(--sub-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+        }
+        
+        .event-content {
+            padding: 24px;
+        }
+        
+        .event-badge {
+            background: var(--main-color);
+            color: white;
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        
+        .event-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        
+        .event-period {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        
+        .event-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">이벤트</h1>
+        </div>
+        
+        <div class="content">
+            <div class="events-grid">
+                <div class="event-card" onclick="location.href='#'">
+                    <div class="event-image">🎉</div>
+                    <div class="event-content">
+                        <span class="event-badge">진행중</span>
+                        <h3 class="event-title">신규 회원가입 시 적립금 10,000원 지급</h3>
+                        <div class="event-period">2024.01.01 ~ 2024.03.31</div>
+                        <p class="event-desc">신규 회원가입 시 즉시 10,000원을 적립해드립니다!</p>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="location.href='#'">
+                    <div class="event-image">🎁</div>
+                    <div class="event-content">
+                        <span class="event-badge">진행중</span>
+                        <h3 class="event-title">예금 가입 시 추첨을 통한 경품 지급</h3>
+                        <div class="event-period">2024.01.05 ~ 2024.02.29</div>
+                        <p class="event-desc">예금 가입하시면 선물을 드립니다.</p>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="location.href='#'">
+                    <div class="event-image">💳</div>
+                    <div class="event-content">
+                        <span class="event-badge">진행중</span>
+                        <h3 class="event-title">체크카드 신규 발급 이벤트</h3>
+                        <div class="event-period">2024.01.01 ~ 2024.12.31</div>
+                        <p class="event-desc">체크카드를 발급받으시면 혜택을 받으실 수 있습니다.</p>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="location.href='#'">
+                    <div class="event-image">💰</div>
+                    <div class="event-content">
+                        <span class="event-badge">진행중</span>
+                        <h3 class="event-title">온라인 이체 수수료 면제 혜택</h3>
+                        <div class="event-period">상시</div>
+                        <p class="event-desc">온라인 뱅킹 이용 시 이체 수수료를 무료로 제공합니다.</p>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="location.href='#'">
+                    <div class="event-image">🏠</div>
+                    <div class="event-content">
+                        <span class="event-badge">진행중</span>
+                        <h3 class="event-title">대출 금리 우대 프로모션</h3>
+                        <div class="event-period">2024.01.10 ~ 2024.06.30</div>
+                        <p class="event-desc">대출 신청 시 우대 금리 혜택을 드립니다.</p>
+                    </div>
+                </div>
+                
+                <div class="event-card" onclick="location.href='#'">
+                    <div class="event-image">🌟</div>
+                    <div class="event-content">
+                        <span class="event-badge">진행중</span>
+                        <h3 class="event-title">친구 초대 이벤트</h3>
+                        <div class="event-period">2024.01.15 ~ 2024.03.31</div>
+                        <p class="event-desc">친구를 초대하면 양쪽 모두 혜택을 드립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

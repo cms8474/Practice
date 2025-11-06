@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예금/적금 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .product-badge {
+            background: var(--main-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .product-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        
+        .product-rate {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--main-color);
+            margin: 16px 0;
+        }
+        
+        .product-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .product-info {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #F0F0F0;
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">예금/적금 상품</h1>
+        </div>
+        
+        <div class="content">
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="product-badge">추천</span>
+                    <h3 class="product-title">그린 정기예금</h3>
+                    <div class="product-rate">연 4.5%</div>
+                    <p class="product-desc">
+                        6개월 이상 가입 시 최대 4.5%의 금리를 제공하는 정기예금 상품입니다.
+                    </p>
+                    <a href="#" class="btn btn-primary">상세보기</a>
+                    <div class="product-info">
+                        • 최소 가입금액: 10만원<br>
+                        • 가입기간: 6개월 ~ 3년
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <span class="product-badge">인기</span>
+                    <h3 class="product-title">그린 적금</h3>
+                    <div class="product-rate">연 3.8%</div>
+                    <p class="product-desc">
+                        매월 저금하는 적금 상품으로 안정적인 자산 형성을 도와드립니다.
+                    </p>
+                    <a href="#" class="btn btn-primary">상세보기</a>
+                    <div class="product-info">
+                        • 최소 가입금액: 1만원<br>
+                        • 가입기간: 최대 24개월
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <span class="product-badge">신상</span>
+                    <h3 class="product-title">미래설계예금</h3>
+                    <div class="product-rate">연 5.0%</div>
+                    <p class="product-desc">
+                        장기 불입형 예금으로 은퇴 이후를 위한 준비를 지원합니다.
+                    </p>
+                    <a href="#" class="btn btn-primary">상세보기</a>
+                    <div class="product-info">
+                        • 최소 가입금액: 50만원<br>
+                        • 가입기간: 5년 이상
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+

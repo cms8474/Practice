@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계좌조회 - GNK 그린은행</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #FFB5D6 0%, #90D7B5 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .account-summary {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        
+        .summary-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+        }
+        
+        .account-list {
+            list-style: none;
+        }
+        
+        .account-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid #F5F5F5;
+        }
+        
+        .account-item:last-child {
+            border-bottom: none;
+        }
+        
+        .account-info {
+            flex: 1;
+        }
+        
+        .account-number {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--text-dark);
+        }
+        
+        .account-type {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .account-balance {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--main-color);
+        }
+        
+        .transaction-history {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .history-table th {
+            text-align: left;
+            padding: 16px;
+            background-color: #F9F9F9;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .history-table td {
+            padding: 16px;
+            border-bottom: 1px solid #F0F0F0;
+        }
+        
+        .amount-positive {
+            color: #4CAF50;
+        }
+        
+        .amount-negative {
+            color: #F44336;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">계좌조회</h1>
+            <p class="page-subtitle">보유 계좌 및 거래내역을 확인하실 수 있습니다</p>
+        </div>
+        
+        <div class="content">
+            <!-- 계좌 요약 -->
+            <div class="account-summary">
+                <h2 class="summary-title">보유 계좌</h2>
+                <ul class="account-list">
+                    <li class="account-item">
+                        <div class="account-info">
+                            <div class="account-number">100-1234-567890</div>
+                            <div class="account-type">입출금 통장</div>
+                        </div>
+                        <div class="account-balance">1,234,567원</div>
+                    </li>
+                    <li class="account-item">
+                        <div class="account-info">
+                            <div class="account-number">200-9876-543210</div>
+                            <div class="account-type">적금 통장</div>
+                        </div>
+                        <div class="account-balance">3,456,789원</div>
+                    </li>
+                    <li class="account-item">
+                        <div class="account-info">
+                            <div class="account-number">300-5555-123456</div>
+                            <div class="account-type">예금 통장</div>
+                        </div>
+                        <div class="account-balance">5,000,000원</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 거래내역 -->
+            <div class="transaction-history">
+                <h2 class="summary-title">거래내역</h2>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>거래일시</th>
+                            <th>거래내용</th>
+                            <th>거래금액</th>
+                            <th>잔액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024.01.15 14:32</td>
+                            <td>이체</td>
+                            <td class="amount-negative">-50,000원</td>
+                            <td>1,184,567원</td>
+                        </tr>
+                        <tr>
+                            <td>2024.01.14 10:15</td>
+                            <td>입금</td>
+                            <td class="amount-positive">+100,000원</td>
+                            <td>1,234,567원</td>
+                        </tr>
+                        <tr>
+                            <td>2024.01.13 16:45</td>
+                            <td>ATM 출금</td>
+                            <td class="amount-negative">-20,000원</td>
+                            <td>1,134,567원</td>
+                        </tr>
+                        <tr>
+                            <td>2024.01.12 09:00</td>
+                            <td>급여</td>
+                            <td class="amount-positive">+2,000,000원</td>
+                            <td>1,154,567원</td>
+                        </tr>
+                        <tr>
+                            <td>2024.01.10 11:23</td>
+                            <td>이체</td>
+                            <td class="amount-negative">-150,000원</td>
+                            <td>1,054,567원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/include.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
+
