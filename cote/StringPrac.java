@@ -81,5 +81,7 @@ public class StringPrac {
         S2ans2 = Integer.valueOf(S2); // 문자열을 숫자로 변환 = 12321
         S2ans2 = (Integer)12321;          // 자동 형변환(오토박싱)
 
+        
+
     }
 }

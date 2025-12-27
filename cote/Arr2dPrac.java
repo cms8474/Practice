@@ -10,13 +10,13 @@ public class Arr2dPrac {
 
 
         // n번째 원소 기준 정렬   ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-            // 1번째 원소 기준 오름차순 정렬
+        // 1번째 원소 기준 오름차순 정렬
         Arrays.sort(arr2D, (a, b) -> {
             return a[0] - b[0];
         }); 
         System.out.println("1번 원소기준 asc: " + Arrays.deepToString(arr2D)); 
 
-            // 2번째 원소 기준 내림차순 정렬
+        // 2번째 원소 기준 내림차순 정렬
         Arrays.sort(arr2D, (a, b) -> {
             return b[1] - a[1];
         });

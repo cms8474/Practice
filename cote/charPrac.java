@@ -39,18 +39,21 @@ public class charPrac {
                            "■ ■ ■ ■ ■ ■ ■ ■ ■ ■ 문자 -> 형변환 ■ ■ ■ ■ ■ ■ ■ ■ ■ \r\n" + //
                            "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
     
-        // String <-> char[], String <-> char
+        // ■■■■ String <-> char[], String <-> char
         String str = "Hello";
-        char[] charArr = str.toCharArray(); // String -> char[]
-        String str2 = String.valueOf(charArr); // char[] -> String
-        char ch1 = str.charAt(0); // String -> char
-        String str3 = String.valueOf(ch1); // char -> String
-        System.out.println(charArr); // Hello
-        System.out.println(str2);    // Hello
-        System.out.println(ch1);     // H
-        System.out.println(str3);    // H
+        char[] charArr = str.toCharArray();    // "Hello" -> char[]{H, e, l, l, o} 
+        String str2 = String.valueOf(charArr); // char[]{H, e, l, l, o} -> "Hello"
+        char ch1 = str.charAt(0);        // String"Hello" -> char 'H'
+        String str3 = String.valueOf(ch1);      // char'H' -> String "H"
 
-        
+        // ■■■■ string <-> int (아스키 코드 값)
+        String strNum = "65";
+        int intNum  = Integer.parseInt(strNum); // String "65" -> int 65
+        strNum      = intNum+"";                // int 65 -> String "65"
+        char ch2    = (char)intNum;             // int 65 -> char 'A'
+        intNum      = (int)ch2;                 // char 'A' -> int 65
+
+        // ■■■■ 
 
     } // main
 }
